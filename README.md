@@ -54,4 +54,4 @@
 ![13](https://github.com/user-attachments/assets/236e4599-da7c-47c0-b1b9-b629bf71d902)
 ![14](https://github.com/user-attachments/assets/ab22eddd-4f89-4dda-99cc-e51d5a4a3604)
 
-There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but it’s best to continue monitoring these threats, setting up more alerts, and blocking the malicious IPs’ inbound and outbound traffic via the Network Settings tab.
+There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but it’s best to continue monitoring these threats, setting up more alerts, and blocking the malicious IPs’ inbound and outbound traffic via the Firewall/Network Settings tab.
