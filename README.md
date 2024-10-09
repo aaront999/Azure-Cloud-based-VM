@@ -1,7 +1,7 @@
 # Azure Cloud-based VM Project
 #### - We will be building a Virtual Machine primarily using Microsoft Azure and Sentinel. 
 
-#### - To enhance our testing, we will intentionally leave RDP (Remote Desktop Protocol) access open on port 3389 to observe any real-time malicious threats attempting to access our machine. By the end, be sure to disable the RDP open port and add MFA (Multi-Factor Authentication) to be safe.
+##### - To enhance our testing, we will intentionally leave RDP (Remote Desktop Protocol) access open on port 3389 to observe any real-time malicious threats attempting to access our machine. By the end, be sure to disable the RDP open port and add MFA (Multi-Factor Authentication) to be safe.
 
 ### Incident Report: https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing
 #
