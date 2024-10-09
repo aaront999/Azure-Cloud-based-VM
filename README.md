@@ -1,7 +1,7 @@
 # Azure Cloud-based VM Project
 #### - We will be building a Virtual Machine primarily using Microsoft Azure and Sentinel. 
 
-#### - To enhance our testing, we will intentionally leave RDP (Remote Desktop Protocol) access open on port 3389 to observe any real-time malicious threats attempting to access our machine.
+#### - To enhance our testing, we will intentionally leave RDP (Remote Desktop Protocol) access open on port 3389 to observe any real-time malicious threats attempting to access our machine. By the end, be sure to disable the RDP open port and add MFA (Multi-Factor Authentication) to be safe.
 #
 1. First we need to download Microsoft Azure and create an account. Once we have that done, we can create a VM by clicking create and naming our container "eren999VM_group" and the VM itself "eren999VM." Once the VM is created, deployed, and running, we can create a Log Analytics workspace via Microsoft Sentinel to monitor traffic.
 
@@ -42,24 +42,33 @@
 <img width="1440" alt="10 4" src="https://github.com/user-attachments/assets/7e9a433b-f08f-48a1-b412-1c94f79e4d43">
 
 #
-7. We also received another alert with Event ID 4798 (local group access) and detected a potential malicious executable, WmiPrvSE[.]exe. After performing OSINT, I didn’t find any hits on Talos Intelligence or VirusTotal, but HybridAnalysis flagged it as suspicious.
+7. I also blocked all the malicious IPs’ inbound and outbound traffic via the Firewall/Network Settings tab.
+
+![15](https://github.com/user-attachments/assets/579ce45f-adea-4fd6-9053-578c38befd1d)
+
+8. Then we received another alert with Event ID 4798 (local group access) and detected a potential malicious executable, WmiPrvSE[.]exe. After performing OSINT, I didn’t find any hits on Talos Intelligence or VirusTotal, but HybridAnalysis flagged it as suspicious.
 
 ![10](https://github.com/user-attachments/assets/ae71f345-d8e7-4f94-a315-158e3d87c259)
 ![11 1](https://github.com/user-attachments/assets/b33b1710-edbe-495c-ab25-d118babad0e7)
 #
-8. Let’s check how many times this executable was associated with the event and whether any child processes were opened. There were 44 instances, but no child processes were launched.
+9. Let’s check how many times this executable was associated with the event and whether any child processes were opened. There were 44 instances, but no child processes were launched.
 
 ![11](https://github.com/user-attachments/assets/310d856e-baa2-4735-92a5-afd77ad88847)
 #
-9. HybridAnalysis confirms that this executable is malicious and should be further investigated, as it can adjust token privileges and hide processes by launching under different user credentials.
+10. HybridAnalysis confirms that this executable is malicious and should be further investigated, as it can adjust token privileges and hide processes by launching under different user credentials.
 
 ![12 1](https://github.com/user-attachments/assets/a6a28ddf-63e6-4816-81b0-135e12d27fe3)
 #
-10. I wanted to see if this alert correlates with the earlier brute force attack, so I queried for any failed login events or associations between the malicious IPs and the executable.
+11. I wanted to see if this alert correlates with the earlier brute force attack, so I queried for any failed login events or associations between the malicious IPs and the executable.
 
 ![13](https://github.com/user-attachments/assets/236e4599-da7c-47c0-b1b9-b629bf71d902)
 ![14](https://github.com/user-attachments/assets/ab22eddd-4f89-4dda-99cc-e51d5a4a3604)
 #
-11. There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but it’s best to continue monitoring these threats, setting up more alerts, and blocking the malicious IPs’ inbound and outbound traffic via the Firewall/Network Settings tab.
+12. There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but we really can't be too sure yet, so it's best to continue monitoring these threats and setting up more alerts. I utilized Sentinel's Playbook to Automate a force stop on the VM if my alert triggers that the executable was seen again.
 
-![15](https://github.com/user-attachments/assets/579ce45f-adea-4fd6-9053-578c38befd1d)
+![16 1](https://github.com/user-attachments/assets/b41bf73b-c910-4095-9496-777345061666)
+![16 3](https://github.com/user-attachments/assets/1767ce9d-2cf9-4b67-8e2b-340826e685f6)
+![16 4](https://github.com/user-attachments/assets/b8b2f296-14a2-4f34-b645-a64193e02e73)
+![16](https://github.com/user-attachments/assets/11ffc54e-9910-401b-a1c5-9a83979a1d01)
+#
+### Incident Report: https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing
