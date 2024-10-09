@@ -55,7 +55,7 @@
 
 ![12 1](https://github.com/user-attachments/assets/a6a28ddf-63e6-4816-81b0-135e12d27fe3)
 #
-10. Lastly, I wanted to see if this alert correlates with the earlier brute force attack, so I queried for any failed login events or associations between the malicious IPs and the executable.
+10. I wanted to see if this alert correlates with the earlier brute force attack, so I queried for any failed login events or associations between the malicious IPs and the executable.
 
 ![13](https://github.com/user-attachments/assets/236e4599-da7c-47c0-b1b9-b629bf71d902)
 ![14](https://github.com/user-attachments/assets/ab22eddd-4f89-4dda-99cc-e51d5a4a3604)
