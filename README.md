@@ -30,11 +30,17 @@
 ![7](https://github.com/user-attachments/assets/e8bc61a3-3db5-4304-9207-7fdfbeab3c32)
 ![8](https://github.com/user-attachments/assets/e8f4014f-3cf0-499b-8d10-034e38b129e9)
 #
-6. Although there were no successful logins, it’s important to set up alerts for Event ID 4624 (successful logins) and monitor the malicious IP addresses for potential future access.
+6. Although there were no successful logins, it’s important to set up alerts for Event ID 4624 (successful logins) and monitor the malicious IP addresses for potential future access. 
 
 ![9](https://github.com/user-attachments/assets/977b20a6-8aac-4838-b33a-d1186371fa1f)
 ![10 1](https://github.com/user-attachments/assets/eb1ade08-50c4-49f8-9fcb-f9db4cb9aa02)
 ![10 2](https://github.com/user-attachments/assets/283e6521-dbb9-4d4c-af92-38a5b5de7f56)
+
+- I also checked for more common attack vectors such as EventID 4104 (PowerShell execution) and 4698 (scheduled tasks) which are often used by malware for persistence but didn’t get any hits.
+
+<img width="1440" alt="10 3" src="https://github.com/user-attachments/assets/f2daebdc-f5c7-4ecc-899f-ad4f6efef3b7">
+<img width="1440" alt="10 4" src="https://github.com/user-attachments/assets/7e9a433b-f08f-48a1-b412-1c94f79e4d43">
+
 #
 7. We also received another alert with Event ID 4798 (local group access) and detected a potential malicious executable, WmiPrvSE[.]exe. After performing OSINT, I didn’t find any hits on Talos Intelligence or VirusTotal, but HybridAnalysis flagged it as suspicious.
 
@@ -53,5 +59,7 @@
 
 ![13](https://github.com/user-attachments/assets/236e4599-da7c-47c0-b1b9-b629bf71d902)
 ![14](https://github.com/user-attachments/assets/ab22eddd-4f89-4dda-99cc-e51d5a4a3604)
+#
+11. There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but it’s best to continue monitoring these threats, setting up more alerts, and blocking the malicious IPs’ inbound and outbound traffic via the Firewall/Network Settings tab.
 
-There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but it’s best to continue monitoring these threats, setting up more alerts, and blocking the malicious IPs’ inbound and outbound traffic via the Firewall/Network Settings tab.
+![15](https://github.com/user-attachments/assets/579ce45f-adea-4fd6-9053-578c38befd1d)
