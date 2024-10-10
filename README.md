@@ -3,7 +3,9 @@
 
 ##### - To enhance our testing, we will intentionally leave RDP (Remote Desktop Protocol) access open on port 3389 to observe any real-time malicious threats attempting to access our machine. By the end, be sure to disable the RDP open port and add MFA (Multi-Factor Authentication) to be safe.
 
-### Incident Report: https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing
+### <a href="https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing" target="_blank">Full Incident Report:</a>
+
+https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing
 #
 1. First we need to download Microsoft Azure and create an account. Once we have that done, we can create a VM by clicking create and naming our container "eren999VM_group" and the VM itself "eren999VM." Once the VM is created, deployed, and running, we can create a Log Analytics workspace via Microsoft Sentinel to monitor traffic.
 
@@ -73,4 +75,4 @@
 ![16 4](https://github.com/user-attachments/assets/b8b2f296-14a2-4f34-b645-a64193e02e73)
 ![16](https://github.com/user-attachments/assets/11ffc54e-9910-401b-a1c5-9a83979a1d01)
 #
-### Incident Report: https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing
+# <a href="https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/edit?usp=sharing" target="_blank">Full Incident Report</a>
