@@ -68,7 +68,7 @@ https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/
 ![13](https://github.com/user-attachments/assets/236e4599-da7c-47c0-b1b9-b629bf71d902)
 ![14](https://github.com/user-attachments/assets/ab22eddd-4f89-4dda-99cc-e51d5a4a3604)
 #
-12. There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but we really can't be too sure yet, so it's best to continue monitoring these threats and setting up more alerts. I utilized Sentinel's Playbook to Automate a force stop on the VM if my alert triggers that the executable was seen again.
+12. There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but we can never really be too sure, so it's best to continue monitoring these threats and setting up more alerts. I utilized Sentinel's Playbook to Automate a force stop on the VM if my alert triggers that the executable was seen again.
 
 ![16 1](https://github.com/user-attachments/assets/b41bf73b-c910-4095-9496-777345061666)
 ![16 3](https://github.com/user-attachments/assets/1767ce9d-2cf9-4b67-8e2b-340826e685f6)
