@@ -55,20 +55,21 @@ https://docs.google.com/document/d/1xWjh1lzxSRHYalbmf3YXON9Lol1dJ2OV78h1DZI3_WY/
 ![10](https://github.com/user-attachments/assets/ae71f345-d8e7-4f94-a315-158e3d87c259)
 ![11 1](https://github.com/user-attachments/assets/b33b1710-edbe-495c-ab25-d118babad0e7)
 #
-9. Let’s check how many times this executable was associated with the event and whether any child processes were opened. There were 44 instances, but no child processes were launched.
-
-![11](https://github.com/user-attachments/assets/310d856e-baa2-4735-92a5-afd77ad88847)
-#
 10. HybridAnalysis confirms that this executable is malicious and should be further investigated, as it can adjust token privileges and hide processes by launching under different user credentials.
 
 ![12 1](https://github.com/user-attachments/assets/a6a28ddf-63e6-4816-81b0-135e12d27fe3)
 #
-11. I wanted to see if this alert correlates with the earlier brute force attack, so I queried for any failed login events or associations between the malicious IPs and the executable.
+9. Let’s check how many times this executable was associated with the event and whether any child processes were opened.
+
+![11](https://github.com/user-attachments/assets/310d856e-baa2-4735-92a5-afd77ad88847)
+- There were 44 instances, but no child processes were launched.
+#
+11. I wanted to see if this malicious executable correlates with the earlier brute force attack, so I queried for any associations between the failed login events, the malicious IPs', and the executable.
 
 ![13](https://github.com/user-attachments/assets/236e4599-da7c-47c0-b1b9-b629bf71d902)
 ![14](https://github.com/user-attachments/assets/ab22eddd-4f89-4dda-99cc-e51d5a4a3604)
 #
-12. There are no results in the past 24 hours supporting a correlation which may suggest they are 2 different attacks, but we can never really be too sure, so it's best to continue monitoring these threats and setting up more alerts. I utilized Sentinel's Playbook to Automate a force stop on the VM if my alert triggers that the executable was seen again.
+12. Considering the time gap of several hours and that there are no results in the past 24 hours may suggest they are 2 different attacks, but we can never really be too sure, so it's best to continue monitoring these threats and setting up more alerts. I utilized Sentinel's Playbook to Automate a force stop on the VM if my alert triggers that the executable was seen again.
 
 ![16 1](https://github.com/user-attachments/assets/b41bf73b-c910-4095-9496-777345061666)
 ![16 3](https://github.com/user-attachments/assets/1767ce9d-2cf9-4b67-8e2b-340826e685f6)
