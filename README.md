@@ -1,5 +1,5 @@
 # Azure Cloud-based VM Project
-#### - We will be building a Virtual Machine primarily using Microsoft Azure and Sentinel to monitor any potential real-time cyber threats. 
+#### - We will be building a Cloud-based Virtual Machine primarily using Microsoft Azure and setting up a SIEM (System Information and Event Management) system using Microsoft Sentinel to connect to our VM and monitor any potential real-time cyber threats. 
 
 ##### - To enhance our testing, we will intentionally leave RDP (Remote Desktop Protocol) access open on port 3389 to observe any real-time malicious threats attempting to access our machine. By the end, be sure to disable the RDP open port and add MFA (Multi-Factor Authentication) to be safe.
 
